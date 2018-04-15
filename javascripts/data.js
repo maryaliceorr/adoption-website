@@ -1,11 +1,11 @@
-const grabAnimals = require('./pets');
+const grabPets = require('./pets');
 const printToDom = require('./dom');
 
-let animalArray = [];
+let petsArray = [];
 
-const animalsLoad = function () {
-  animalArray = JSON.parse(this.responseText).pets;
-  printToDom(animalArray);
+const petsLoad = function () {
+  petsArray = JSON.parse(this.responseText).pets;
+  printToDom(petsArray);
 };
 
 const nope = () => {
@@ -13,14 +13,14 @@ const nope = () => {
 };
 
 const initializer = () => {
-  grabAnimals(animalsLoad, nope);
+  grabPets(petsLoad, nope);
 };
 
-const getAnimals = () => {
-  return animalArray;
+const getPets = () => {
+  return petsArray;
 };
 
 module.exports = {
   initializer,
-  getAnimals,
+  getPets,
 };
