@@ -5,7 +5,7 @@ const outputDiv = document.getElementById('pet-holder');
 const cardBuilder = (petsArray) => {
   let domStrang = '';
   petsArray.forEach((pet) => {
-    domStrang += `<div class='buttons col-md-4'>`;
+    domStrang += `<div id='${pet.id}' class='buttons col-md-4'>`;
     domStrang +=    `<div class='panel'>`;
     domStrang +=        `<div class='center'>`;
     if (pet.type === 'cat') {
