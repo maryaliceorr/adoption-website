@@ -1,9 +1,11 @@
 body {
   background-color: lightgrey;
+  color: white;
 }
 
 h1 {
 text-align: center;
+font-size: 48px;
 }
 
 .button-holder {
@@ -27,5 +29,17 @@ text-align: center;
 }
 
 .panel {
+  height: 625px;
+  background-color: gray;
+}
+
+.panel-body img {
+  width: 400px;
   height: 400px;
 }
+
+.center {
+  text-align: center;
+
+}
+
