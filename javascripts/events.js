@@ -3,33 +3,28 @@ const petCards = document.getElementsByClassName('buttons');
 const resetButton = document.getElementById('reset-button');
 
 const showDino = (e) => {
-  const catId = e.target.parentNode.id('cat');
-  const dogId = e.target.parentNode.id('dog');
-
-  catId.classList.add('hide');
-  dogId.classList.add('hide');
+  const pets = document.getElementsByClassName('pets');
+  for (let i = 0; i < pets.length; i ++) {
+    console.log(pets[i]);
+  }
+  
+  // catId.classList.add('hide');
+  // dogId.classList.add('hide');
 };
 
 const showDog = (e) => {
-  const catId = e.target.parentNode.id('cat');
-  const dinoId = e.target.parentNode.id('dino');
 
-  catId.classList.add('hide');
-  dinoId.classList.add('hide');
+  // catId.classList.add('hide');
+  // dinoId.classList.add('hide');
 };
 
 const showCat = (e) => {
-  const dogId = e.target.parentNode.id('dog');
-  const dinoId = e.target.parentNode.id('dino');
 
-  dogId.classList.add('hide');
-  dinoId.classList.add('hide');
+//   dogId.classList.add('hide');
+//   dinoId.classList.add('hide');
 };
 
 const showAllButtons = (e) => {
-  const dogId = e.target.parentNode.id('dog');
-  const catId = e.target.parentNode.id('cat');
-  const dinoId = e.target.parentNode.id('dino');
 
   catId.classList.remove('hide');
   dogId.classList.remove('hide');
