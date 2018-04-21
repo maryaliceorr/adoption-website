@@ -1,3 +1,6 @@
+const data = require('./data');
+const dom = require('./dom')
+
 const petCards = document.getElementsByClassName('buttons');
 
 const resetButton = document.getElementById('reset-button');
@@ -7,7 +10,7 @@ const showDino = (e) => {
   for (let i = 0; i < pets.length; i ++) {
     console.log(pets[i]);
   }
-  
+
   // catId.classList.add('hide');
   // dogId.classList.add('hide');
 };
@@ -19,7 +22,7 @@ const showDog = (e) => {
 };
 
 const showCat = (e) => {
-
+  const catId =
 //   dogId.classList.add('hide');
 //   dinoId.classList.add('hide');
 };
