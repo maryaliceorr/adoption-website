@@ -1,51 +1,64 @@
-const data = require('./data');
-const dom = require('./dom');
-const pets = require('./pets');
+// const pets = require('./pets');
 
 const catButton = document.getElementById('cat-button');
 const dogButton = document.getElementById('dog-button');
 const dinoButton = document.getElementById('dino-button');
-const resetButton = document.getElementById('reset-button');
+// const resetButton = document.getElementById('reset-button');
 
-const cat = document.getElementByClassName('cat');
-const dog = document.getElementByClassName('dog');
-const dino = document.getElemtByClassName('dino');
+const cats = document.getElementsByClassName('cat');
+const dogs = document.getElementsByClassName('dog');
+const dinos = document.getElementsByClassName('dino');
 
-// const showDino = (e) => {
-//   const pets = document.getElementsByClassName('pets');
-//   for (let i = 0; i < pets.length; i ++) {
-//     console.log(pets[i]);
-//   }
-const showDino = (e) => {
-  cat.classList.add('hide');
-  dog.classList.add('hide');
+const showDinos = (e) => {
+  for (let i = 0; i < cats.length; i++) {
+    cats[i].classList.add('hide');
+  }
+
+  for (let i = 0; i < dogs.length; i++) {
+    dogs[i].classList.add('hide');
+  }
+
+  for (let i = 0; i < dinos.length; i++) {
+    dinos[i].classList.remove('hide');
+  }
 };
 
-const showDog = (e) => {
-  cat.classList.add('hide');
-  dino.classList.add('hide');
+const showDogs = (e) => {
+  for (let i = 0; i < cats.length; i++) {
+    cats[i].classList.add('hide');
+  }
+
+  for (let i = 0; i < dogs.length; i++) {
+    dogs[i].classList.remove('hide');
+  }
+
+  for (let i = 0; i < dinos.length; i++) {
+    dinos[i].classList.add('hide');
+  }
 };
 
-const showCat = (e) => {
-  dog.classList.add('hide');
-  dino.classList.add('hide');
+const showCats = (e) => {
+  for (let i = 0; i < cats.length; i++) {
+    cats[i].classList.remove('hide');
+  }
+
+  for (let i = 0; i < dogs.length; i++) {
+    dogs[i].classList.add('hide');
+  }
+
+  for (let i = 0; i < dinos.length; i++) {
+    dinos[i].classList.add('hide');
+  }
 };
 
 const showRelevantPets = (e) => {
-  for (let i = 0; i < pets; i++) {
-    if (pets[i].id === 'cat') {
-      catButton.addEventListener('click', showCat);
-    }
-    else if (pets[i].id === 'dog') {
-      dogButton.addEventListener('click', showDog);
-    } else {
-      dinoButton.addEventListener('click', showDino);
-    };
-  };
+  catButton.addEventListener('click', showCats);
+  dogButton.addEventListener('click', showDogs);
+  dinoButton.addEventListener('click', showDinos);
 };
 
 const resetCards = (e) => {
-  resetButton.addEventListener('click', showAllButtons);
+//   resetButton.addEventListener('click', pets.loadPets());
 };
 
 module.exports = {

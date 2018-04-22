@@ -3,4 +3,5 @@ const domEvents = require('./events');
 
 data.initializer();
 
-domEvents();
+domEvents.resetCards();
+domEvents.showRelevantPets();
