@@ -1,48 +1,45 @@
 const data = require('./data');
-const dom = require('./dom')
+const dom = require('./dom');
+const pets = require('./pets');
 
-const petCards = document.getElementsByClassName('buttons');
-
+const catButton = document.getElementById('cat-button');
+const dogButton = document.getElementById('dog-button');
+const dinoButton = document.getElementById('dino-button');
 const resetButton = document.getElementById('reset-button');
 
-const showDino = (e) => {
-  const pets = document.getElementsByClassName('pets');
-  for (let i = 0; i < pets.length; i ++) {
-    console.log(pets[i]);
-  }
+const cat = document.getElementByClassName('cat');
+const dog = document.getElementByClassName('dog');
+const dino = document.getElemtByClassName('dino');
 
-  // catId.classList.add('hide');
-  // dogId.classList.add('hide');
+// const showDino = (e) => {
+//   const pets = document.getElementsByClassName('pets');
+//   for (let i = 0; i < pets.length; i ++) {
+//     console.log(pets[i]);
+//   }
+const showDino = (e) => {
+  cat.classList.add('hide');
+  dog.classList.add('hide');
 };
 
 const showDog = (e) => {
-
-  // catId.classList.add('hide');
-  // dinoId.classList.add('hide');
+  cat.classList.add('hide');
+  dino.classList.add('hide');
 };
 
 const showCat = (e) => {
-  const catId =
-//   dogId.classList.add('hide');
-//   dinoId.classList.add('hide');
-};
-
-const showAllButtons = (e) => {
-
-  catId.classList.remove('hide');
-  dogId.classList.remove('hide');
-  dinoId.classList.remove('hide');
+  dog.classList.add('hide');
+  dino.classList.add('hide');
 };
 
 const showRelevantPets = (e) => {
-  for (let i = 0; i < petCards; i++) {
-    if (petCards[i].id === 'cat') {
-      petCards[i].addEventListener('click', showCat);
+  for (let i = 0; i < pets; i++) {
+    if (pets[i].id === 'cat') {
+      catButton.addEventListener('click', showCat);
     }
-    else if (petCards[i].id === 'dog') {
-      petCards[i].addEventListener('click', showDog);
+    else if (pets[i].id === 'dog') {
+      dogButton.addEventListener('click', showDog);
     } else {
-      petCards[i].addEventListener('click', showDino);
+      dinoButton.addEventListener('click', showDino);
     };
   };
 };
