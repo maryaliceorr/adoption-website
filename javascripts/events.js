@@ -1,9 +1,10 @@
-// const pets = require('./pets');
+const printToDom = require('./dom');
+const data = require('./data');
 
 const catButton = document.getElementById('cat-button');
 const dogButton = document.getElementById('dog-button');
 const dinoButton = document.getElementById('dino-button');
-// const resetButton = document.getElementById('reset-button');
+const resetButton = document.getElementById('reset-button');
 
 const cats = document.getElementsByClassName('cat');
 const dogs = document.getElementsByClassName('dog');
@@ -55,10 +56,12 @@ const showRelevantPets = (e) => {
   catButton.addEventListener('click', showCats);
   dogButton.addEventListener('click', showDogs);
   dinoButton.addEventListener('click', showDinos);
+  resetButton.addEventListener('click', resetCards);
 };
 
 const resetCards = (e) => {
-//   resetButton.addEventListener('click', pets.loadPets());
+  const petsArray = data.getPets();
+  printToDom(petsArray);
 };
 
 module.exports = {
