@@ -10,7 +10,9 @@ This site should have multiple cards of pets with their descriptions and types. 
 ![Adoption Website Screenshot 4](https://raw.githubusercontent.com/maryaliceorr/adoption-website/master/screenshots/screenshot%204.png)
 
 ## Instructions
-1. Clone down this repo, and cd into project
-2. Install http-server plugin via npm
-3. In your terminal: hs -p 9999
-4. In your browser navigation to: localhost:7001
+1. Clone down this repo and CD into project.
+2. Install the http-server plugin via npm.
+3. CD into the lib directory and run npm install via command line.
+4. In the lib directory run the command grunt.
+5. CD to the root of the directory and run in separate terminal tab: hs -p 9999.
+6. Navigate to localhost:9999 in browser.
